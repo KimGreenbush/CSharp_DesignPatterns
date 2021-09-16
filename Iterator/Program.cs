@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Iterator
 {
@@ -6,7 +8,11 @@ namespace Iterator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var collection = new DaysInMonthCollection();
+            foreach (var monthWithDays in collection)
+            {
+                Console.WriteLine($"Days in {monthWithDays.Date} - {monthWithDays.Days}");
+            }
         }
     }
 }
