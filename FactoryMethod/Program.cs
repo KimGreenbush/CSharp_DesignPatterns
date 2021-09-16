@@ -6,7 +6,9 @@ namespace FactoryMethod
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var notificationServiceProvider = new NotificationSericeProvider();
+            var shippingService = new ShippingService(notificationServiceProvider);
+            shippingService.ShipItem();
         }
     }
 }
